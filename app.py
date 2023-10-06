@@ -29,6 +29,6 @@ def predict():
     final_features=[np.array(int_features)]
     prediction=regmodel.predict(final_features)
     output=round(prediction[0],2)
-    return render_template('index.html',prediction_text='Predicted Temperature is {}°C'.format(output))
+    return render_template('index.html',prediction_text='Predicted Soil Mositure: {}%'.format(output))
 if __name__ == "__main__":
     app.run(debug=True) 
